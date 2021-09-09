@@ -16,6 +16,7 @@ function handleEntry(event) {
 $input.addEventListener('input', handleEntry);
 
 function handleSubmit(event) {
+  event.preventDefault();
 
   var obj = {
     title: $form.title.value,
@@ -26,6 +27,7 @@ function handleSubmit(event) {
   data.entries.unshift(obj);
   $img.src = $imgSrc;
 
+  $ul.prepend(createEntry(obj));
   $form.reset();
 }
 
@@ -69,7 +71,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 var $view = document.querySelectorAll('.view');
 
-function handleContainer(event) {
+function handleContainer(view) {
   if (!event.target.matches('.click')) {
     return;
   }
