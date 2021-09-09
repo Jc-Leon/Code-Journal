@@ -2,6 +2,10 @@
   font-family: sans-serif;
 }
 
+body {
+  background-color: #f0f0f0;
+}
+
 .background-color {
   background-color: #562b80;
   color: #fff;
@@ -17,10 +21,6 @@ textarea {
   padding: 0.5rem 5px;
 }
 
-main {
-  background-color: #f0f0f0;
-}
-
 .flex-end {
   justify-content: flex-end;
 }
@@ -30,4 +30,36 @@ main {
   padding: 7px 18px;
   font-size: 20px;
   border-radius: 5px;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.padding-left {
+  padding-left: 1rem;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.no-pad {
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.click:hover {
+  cursor: pointer;
+}
+
+.click:active {
+  transform: translateY(0.2rem);
 }
