@@ -71,16 +71,21 @@ window.addEventListener('DOMContentLoaded', function () {
 
 var $view = document.querySelectorAll('.view');
 
-function handleContainer(switchView) {
+function handleContainer(view) {
   for (var i = 0; i < $view.length; i++) {
     var views = $view[i];
-    if (views.getAttribute('data-view') === switchView) {
+    if (views.getAttribute('data-view') === event.target.getAttribute('data-view')) {
       views.className = 'view';
     } else {
       views.className = 'view hidden';
     }
   }
 }
-document.addEventListener('click', function (event) {
-  handleContainer('view');
-});
+function handleClick(switchView) {
+  if (!event.target.getAttribute('data-view')) {
+    return;
+  }
+  handleContainer(switchView);
+}
+
+document.addEventListener('click', handleClick);
