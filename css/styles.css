@@ -63,3 +63,8 @@ ul {
 .click:active {
   transform: translateY(0.2rem);
 }
+
+a {
+  text-decoration: none;
+  color: #fff;
+}

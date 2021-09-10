@@ -74,7 +74,7 @@ var $view = document.querySelectorAll('.view');
 function switchView(view) {
   for (var i = 0; i < $view.length; i++) {
     var views = $view[i];
-    if (views.getAttribute('data-view') === event.target.getAttribute('data-view')) {
+    if (views.getAttribute('data-view') === view) {
       views.className = 'view';
     } else {
       views.className = 'view hidden';
@@ -85,7 +85,8 @@ function handleViewNavigation(switchEvent) {
   if (!event.target.getAttribute('data-view')) {
     return;
   }
-  switchView(switchView);
+  var views = event.target.getAttribute('data-view');
+  switchView(views);
 }
 
 document.addEventListener('click', handleViewNavigation);
