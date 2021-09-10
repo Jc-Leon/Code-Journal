@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 var $view = document.querySelectorAll('.view');
 
-function handleContainer(view) {
+function handleContainer(switchView) {
   for (var i = 0; i < $view.length; i++) {
     var views = $view[i];
     if (views.getAttribute('data-view') === event.target.getAttribute('data-view')) {
@@ -81,11 +81,11 @@ function handleContainer(view) {
     }
   }
 }
-function handleClick(switchView) {
+function handleClick(handleViewNavigation) {
   if (!event.target.getAttribute('data-view')) {
     return;
   }
-  handleContainer(switchView);
+  handleContainer(handleViewNavigation);
 }
 
 document.addEventListener('click', handleClick);
