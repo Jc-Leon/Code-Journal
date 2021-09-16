@@ -56,15 +56,22 @@ ul {
   list-style-type: none;
 }
 
-.click:hover {
+.click,
+i:hover {
   cursor: pointer;
 }
 
-.click:active {
+.click,
+i:active {
   transform: translateY(0.2rem);
 }
 
 a {
   text-decoration: none;
   color: #fff;
+}
+
+.title-edit {
+  display: flex;
+  justify-content: space-between;
 }
