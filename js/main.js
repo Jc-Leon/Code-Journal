@@ -5,6 +5,7 @@ var $img = document.querySelector('.update-img');
 var $form = document.querySelector('form');
 var $imgSrc = './images/placeholder-image-square.jpg';
 var $ul = document.querySelector('ul');
+var $changeText = document.querySelector('.changeText');
 
 function handleEntry(event) {
   if ($input.value === '') {
@@ -132,7 +133,7 @@ function handleEdit(event) {
     return;
   }
   switchView(data.view);
-
+  $changeText.textContent = 'Edit Entry';
   for (var i = 0; i < data.entries.length; i++) {
     if (data.entries[i].entryID.toString() === entryID.toString()) {
       var name = data.entries[i].title;
